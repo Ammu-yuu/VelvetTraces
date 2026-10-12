@@ -1,0 +1,60 @@
+.exhibit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.exhibit {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.exhibit.flagged {
+  border-color: var(--claret);
+}
+.exhibit-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.exhibit-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.exhibit-desc {
+  margin: 0;
+  font-size: 13px;
+}
+.exhibit-finding {
+  margin: 4px 0;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.exhibit .btn {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.notes {
+  margin-top: 16px;
+}
+.notes-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.notes textarea {
+  width: 100%;
+  min-height: 90px;
+  resize: vertical;
+  padding: 10px 12px;
+  border: 1px solid var(--ink-line);
+  border-radius: 6px;
+  background: var(--ink);
+  color: #e6d6c4;
+  font-family: var(--font-hand);
+  font-size: 13px;
+  line-height: 2;
+}

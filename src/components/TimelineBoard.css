@@ -1,0 +1,143 @@
+.source-settings {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 10px 24px;
+}
+.source-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.source-row select {
+  background: var(--ink);
+  color: var(--ivory);
+  border: 1px solid var(--brass);
+  border-radius: 6px;
+  padding: 4px 8px;
+  font: inherit;
+  font-size: 13px;
+}
+
+.board-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0 10px;
+}
+.toggle {
+  display: flex;
+  border: 1px solid var(--brass);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.toggle button {
+  border: 0;
+  background: transparent;
+  padding: 6px 14px;
+  font-size: 13px;
+}
+.toggle button.on {
+  background: var(--oxblood);
+}
+
+.board {
+  padding: 16px 16px 8px;
+}
+.lane {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  border-bottom: 1px solid var(--ink-line);
+}
+.lane-name {
+  padding-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+.lane-track {
+  position: relative;
+  /* room for the last label to sit right of its dot */
+  margin-right: 220px;
+}
+
+.event {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  white-space: nowrap;
+  font-size: 12px;
+  transform: translateX(-5px);
+}
+.event .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brass);
+  flex: none;
+}
+.event.unresolved .dot {
+  background: transparent;
+  border: 1.5px dashed var(--brass);
+}
+.event.unresolved .event-label {
+  opacity: 0.6;
+}
+
+.axis {
+  position: relative;
+  height: 28px;
+  margin: 0 220px 0 110px;
+}
+.tick {
+  position: absolute;
+  top: 8px;
+  transform: translateX(-50%);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+}
+.board-lanes {
+  position: relative;
+}
+.track-overlay {
+  position: absolute;
+  inset: 0 220px 0 110px;
+  pointer-events: none;
+}
+.clock-change {
+  position: absolute;
+  top: -14px;
+  bottom: 0;
+  border-left: 2px dashed var(--brass);
+  padding-left: 6px;
+  font-size: 11px;
+  color: var(--brass);
+  white-space: nowrap;
+}
+
+.event-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.event-table th,
+.event-table td {
+  text-align: left;
+  padding: 7px 10px;
+  border-bottom: 1px solid var(--ink-line);
+}
+.event-table th {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.lock-row {
+  margin-top: 20px;
+}
+.assessment {
+  line-height: 1.7;
+}
